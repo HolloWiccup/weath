@@ -95,6 +95,7 @@ function createWeather(city){
 }
 
 function getFetch(city, url){
+    console.log(city, url);
     const urlWeather = `${url}?q=${city}&appid=${API_KEY}&units=metric&lang=ru`;
     return fetch(urlWeather);
 }
