@@ -2,6 +2,8 @@ import { UI_ELEMENT, HEART, SERVER_URL, API_KEY } from "./constants.js";
 import { storage, createCity } from "./cities.js";
 import { createTabNow, createTabDetails, createTabForecast } from "./createTabs.js";
 
+console.log(UI_ELEMENT, HEART, SERVER_URL, API_KEY);
+
 const WEATHER_CLASS = {
     SEARCH_INPUT: 'search-form__input',
     ADD_CITY: 'now__add-city',
