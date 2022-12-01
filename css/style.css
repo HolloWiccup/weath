@@ -62,11 +62,12 @@ ul li {
     height: 30px;
 }
 .info-window{
-    background-color:aqua;
+    background-color:rgba(0, 255, 255, 0.651);
     width: 300px;
     height: 320px;
 }
 .now{
+    max-height: 100%;
     display: grid;
     grid-template-rows: 1fr 2fr 0.4fr;
 }
@@ -107,7 +108,7 @@ ul li {
     padding-top: 16px;
 }
 .forecast{
-    padding: 0 18px;
+    padding: 0 15px;
     font-size: 24px;
 }
 .forecast__city{
@@ -117,10 +118,13 @@ ul li {
 .list-card{
     height: 290px;
     overflow-y: auto;
+    scrollbar-color: transparent;
+    scrollbar-width: none;
 }
 .list-card::-webkit-scrollbar{
     width: 0px;
 }
+
 .card-weather{
     margin-top: 9px;
     padding: 6px 4px;
@@ -148,22 +152,27 @@ ul li {
     justify-content: center;
 }
 .favourites__title {
+    background-color:rgba(248, 173, 102, 0.726);  
     font-size: 24px;
-    height: 30px;
-    padding: 5px 18px;
+    height: 40px;
+    padding: 10px 18px;
+}
+.favourites{
+    background-color:rgba(210, 180, 140, 0.637);
 }
 .favourites__cities{
     padding: 5px 18px;
     width: 300px;
-    height: 320px;
+    height: 310px;
     overflow-y: auto;
 }
 .favourites__cities li{
     display: flex;
     cursor: pointer;
     justify-content: space-between;
-    padding: 5px 0;
+    padding: 5px;
     margin: 5px 0;
+    background-color:rgba(165, 42, 42, 0.356);
 }
 
 .favourites__remove {
