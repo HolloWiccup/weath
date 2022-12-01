@@ -92,7 +92,7 @@ function createCardForecast(element){
     let feels_like = document.createElement('div');
     feels_like.textContent = `Ощущается: ${Math.round(element.main.feels_like)}`;
     let weather = document.createElement('div');
-    weather.textContent = `Погода: ${element.weather[0].main}`;
+    weather.textContent = `${element.weather[0].main}`;
 
     let container = document.createElement('div');
     container.className = 'card-weather__picture';
