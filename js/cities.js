@@ -25,7 +25,7 @@ const storage = {
     },
     checkCity: function(city){
         let cities = this.getCities();
-        return cities.length > 1 ? cities.includes(city) : false;
+        return cities.length > 0 ? cities.includes(city) : false;
     },
     _stringifyCities: function(cities){
         let citiesJSON = JSON.stringify(cities);
