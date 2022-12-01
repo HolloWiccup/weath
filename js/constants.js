@@ -12,8 +12,8 @@ const HEART = {
 }
 
 const SERVER_URL = {
-    WEATHER: 'http://api.openweathermap.org/data/2.5/weather',
-    FORECAST: 'http://api.openweathermap.org/data/2.5/forecast',
+    WEATHER: 'https://api.openweathermap.org/data/2.5/weather',
+    FORECAST: 'https://api.openweathermap.org/data/2.5/forecast',
 }
 const API_KEY = '3bfb7384f048b8e78896a10d694dd618';
 
