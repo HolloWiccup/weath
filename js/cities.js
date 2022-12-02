@@ -1,6 +1,7 @@
 const storage = {
     CITIES: 'favouriteCities',
     LAST_CITY: 'lastCity',
+    ALTERNATIVE_CITY: 'Архангельск',
     addOrRemoveCity: function(city){
         let list = this.getCities();
         list = !this.checkCity(city) ? [...list, city] :
@@ -12,20 +13,18 @@ const storage = {
         if(!cities){
             this._stringifyCities([]);
         }
-        return JSON.parse(cities);
+        return cities ? JSON.parse(cities) : [] ;
     },
     setLastCity: function(city){
         localStorage.setItem(this.LAST_CITY, city)
     },
     getLastCity: function(){
-        return localStorage.getItem(this.LAST_CITY);
-        // let cities = this.getCities();
-        // return cities.length > 0 ? cities[cities.length - 1] : '';
-
+        let lastCity = localStorage.getItem(this.LAST_CITY);
+        return lastCity ? lastCity : this.ALTERNATIVE_CITY;
     },
     checkCity: function(city){
         let cities = this.getCities();
-        return cities.length > 1 ? cities.includes(city) : false;
+        return cities.length > 0 ? cities.includes(city) : false;
     },
     _stringifyCities: function(cities){
         let citiesJSON = JSON.stringify(cities);
