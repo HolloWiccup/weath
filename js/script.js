@@ -54,6 +54,7 @@ function favouritesHandler(event) {
   if (target.className === WEATHER_CLASS.FAVOURITES_REMOVE) {
     let city = target.closest(`.${WEATHER_CLASS.FAVOURITES_CITY}`).textContent;
     storage.addOrRemoveCity(city);
+    createWeather(city);
     renderListCity();
   }
 }
